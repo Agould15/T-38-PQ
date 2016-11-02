@@ -1,0 +1,420 @@
+Ejection History
+
+
+--Pull out Month
+if Text.Contains([Date],"January") then "1" else if
+Text.Contains([Date],"February") then "2" else if
+Text.Contains([Date],"March") then "3" else if
+Text.Contains([Date],"April") then "4" else if
+Text.Contains([Date],"May") then "5" else if
+Text.Contains([Date],"June") then "6" else if
+Text.Contains([Date],"July") then "7" else if
+Text.Contains([Date],"August") then "8" else if
+Text.Contains([Date],"September") then "9" else if
+Text.Contains([Date],"October") then "10" else if
+Text.Contains([Date],"November") then "11" else if
+Text.Contains([Date],"December") then "12" else "CHECK"
+
+--Pull out day
+if Text.Contains([Date],"31") then "31" else if
+Text.Contains([Date],"30") then "30" else if
+Text.Contains([Date],"29") then "29" else if
+Text.Contains([Date],"28") then "28" else if
+Text.Contains([Date],"27") then "27" else if
+Text.Contains([Date],"26") then "26" else if
+Text.Contains([Date],"25") then "25" else if
+Text.Contains([Date],"24") then "24" else if
+Text.Contains([Date],"23") then "23" else if
+Text.Contains([Date],"22") then "22" else if
+Text.Contains([Date],"21") then "21" else if
+Text.Contains([Date],"20") then "20" else if
+Text.Contains([Date],"19") then "19" else if
+Text.Contains([Date],"18") then "18" else if
+Text.Contains([Date],"17") then "17" else if
+Text.Contains([Date],"16") then "16" else if
+Text.Contains([Date],"15") then "15" else if
+Text.Contains([Date],"14") then "14" else if
+Text.Contains([Date],"13") then "13" else if
+Text.Contains([Date],"12") then "12" else if
+Text.Contains([Date],"11") then "11" else if
+Text.Contains([Date],"10") then "10" else if
+Text.Contains([Date],"9") then "9" else if
+Text.Contains([Date],"8") then "8" else if
+Text.Contains([Date],"7") then "7" else if
+Text.Contains([Date],"6") then "6" else if
+Text.Contains([Date],"5") then "5" else if
+Text.Contains([Date],"4") then "4" else if
+Text.Contains([Date],"3") then "3" else if
+Text.Contains([Date],"2") then "2" else if
+Text.Contains([Date],"1") then "1"
+else "Check"
+
+--Find Year
+if (try Number.From([#"Date - Copy.1"]) otherwise 0)>1000 then [#"Date - Copy.1"]
+else if (try Number.From([#"Date - Copy.2"]) otherwise 0)>1000 then [#"Date - Copy.2"]
+else if (try Number.From([#"Date - Copy.3"]) otherwise 0)>1000 then [#"Date - Copy.3"]
+else if (try Number.From([#"Date - Copy.4"]) otherwise 0)>1000 then [#"Date - Copy.4"]
+else if (try Number.From([#"Date - Copy.5"]) otherwise 0)>1000 then [#"Date - Copy.5"]
+else if (try Number.From([#"Date - Copy.6"]) otherwise 0)>1000 then [#"Date - Copy.6"]
+else if (try Number.From([#"Date - Copy.7"]) otherwise 0)>1000 then [#"Date - Copy.7"]
+else if (try Number.From([#"Date - Copy.8"]) otherwise 0)>1000 then [#"Date - Copy.8"]
+else if (try Number.From([#"Date - Copy.9"]) otherwise 0)>1000 then [#"Date - Copy.9"]
+else "CHECK"
+
+--Find day
+if (try Number.From([#"Date - Copy.1"]) otherwise 10000)<1000 then [#"Date - Copy.1"]
+else if (try Number.From([#"Date - Copy.2"]) otherwise 10000)<1000 then [#"Date - Copy.2"]
+else if (try Number.From([#"Date - Copy.3"]) otherwise 10000)<1000 then [#"Date - Copy.3"]
+else if (try Number.From([#"Date - Copy.4"]) otherwise 10000)<1000 then [#"Date - Copy.4"]
+else if (try Number.From([#"Date - Copy.5"]) otherwise 10000)<1000 then [#"Date - Copy.5"]
+else if (try Number.From([#"Date - Copy.6"]) otherwise 10000)<1000 then [#"Date - Copy.6"]
+else if (try Number.From([#"Date - Copy.7"]) otherwise 10000)<1000 then [#"Date - Copy.7"]
+else if (try Number.From([#"Date - Copy.8"]) otherwise 10000)<1000 then [#"Date - Copy.8"]
+else if (try Number.From([#"Date - Copy.9"]) otherwise 10000)<1000 then [#"Date - Copy.9"]
+else "CHECK"
+
+--Map to Base
+if Text.Contains([Based],"It has been 27 years since I sat on an ejection seat") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"121 Sq") then "Izmir Air Station" else if
+Text.Contains([Based],"121 Sq") then "Izmir Air Station" else if
+Text.Contains([Based],"121 Sq") then "Izmir Air Station" else if
+Text.Contains([Based],"12nd FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"12th FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"12th FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"12th FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"14 FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"26 TFTS") then "Clark Air Base" else if
+Text.Contains([Based],"34th ARS") then "Seymour Johnson Air Force Base" else if
+Text.Contains([Based],"3560th ") then "Webb Air Force Base " else if
+Text.Contains([Based],"38th FTW") then "Williams Air Force Base" else if
+Text.Contains([Based],"412th TW") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"434th TFTS") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"435th FTS") then "Randolph Air Force Base" else if
+Text.Contains([Based],"436th TFTS") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Langley") then "Langley Air Force Base" else if
+Text.Contains([Based],"6512th TS") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Richards-Gebaur") then "Richards-Gebaur Air Reserve Station" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"87th FTS") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Edwards") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"lackland") then "Lackland Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Unknown") then "Unknown" else if
+Text.Contains([Based],"Bergstrom") then "Bergstrom Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Craig") then "Craig Air Force Base" else if
+Text.Contains([Based],"Craig") then "Craig Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"ROCAF 14th") then "Taoyuan Air Base Command" else if
+Text.Contains([Based],"El Paso Tex") then "Bergstrom Air Force Base" else if
+Text.Contains([Based],"Ellington") then "Ellington Field Joint Reserve Base" else if
+Text.Contains([Based],"Ellington") then "Ellington Field Joint Reserve Base" else if
+Text.Contains([Based],"Following crews killed") then "Unknown" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Turkish") then "Unknown" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Houston Space Center") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Tinker") then "Tinker Air Force Base" else if
+Text.Contains([Based],"Data Base") then "Unknown" else if
+Text.Contains([Based],"Laredo") then "Laredo Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Lunar Lander") then "Unknown" else if
+Text.Contains([Based],"Moody") then "Moody Air Force Base" else if
+Text.Contains([Based],"NASA") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"NASA") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"NASA") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"Lambert") then "Lambert–St. Louis International Airport" else if
+Text.Contains([Based],"Navy Test") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"NTPS") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"Naval Air Station") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Source") then "Unknown" else if
+Text.Contains([Based],"Source") then "Unknown" else if
+Text.Contains([Based],"Taiwan") then "Taoyuan Air Base Command" else if
+Text.Contains([Based],"Edwards") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Burk Lakefront") then "Cleveland Burke Lakefront Airport" else if
+Text.Contains([Based],"Thunderbirds") then "Hill Air Force Base" else if
+Text.Contains([Based],"Thunderbirds #9") then "Nellis Air Force Base" else if
+Text.Contains([Based],"Two pilots were killed in a T-38") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Tyndall") then "Tyndall Air Force Base" else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"NTPS") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Webb") then "Webb Air Force Base " else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"Williams Air Force") then "Williams Air Force Base" else "CHECK"
+
+
+--Full Power Query M
+let
+    Source = Excel.CurrentWorkbook(){[Name="'T-38 Scraper'!_FilterDatabase"]}[Content],
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type any}, {"Column2", type any}, {"Column3", type text}, {"Column4", type any}, {"Column5", type any}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type any}, {"Column11", type any}, {"Column12", type any}, {"Column13", type any}, {"Column14", type any}}),
+    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type"),
+    #"Group By Unit-Serial (remove dups)" = Table.Group(#"Promoted Headers", {"Unit / Serial"}, {{"Date", each List.Min([Date]), type text}, {"Content", each List.Min([#"Date Air Force A'cft Unit / Serial based crashed crew photo seat"]), type text}, {"Photo", each List.Min([photo]), type none}, {"Seat", each List.Min([seat]), type none}, {"Based", each List.Min([based]), type text}, {"Crew", each List.Min([crew]), type text}, {"Crashed", each List.Min([crashed]), type text}}),
+    #"Remove Nulls" = Table.ReplaceValue(#"Group By Unit-Serial (remove dups)",null,"0",Replacer.ReplaceValue,{"Date"}),
+    #"Find Month" = Table.AddColumn(#"Remove Nulls", "Month", each if Text.Contains([Date],"January") then "1" else if
+Text.Contains([Date],"February") then "2" else if
+Text.Contains([Date],"March") then "3" else if
+Text.Contains([Date],"April") then "4" else if
+Text.Contains([Date],"May") then "5" else if
+Text.Contains([Date],"June") then "6" else if
+Text.Contains([Date],"July") then "7" else if
+Text.Contains([Date],"August") then "8" else if
+Text.Contains([Date],"September") then "9" else if
+Text.Contains([Date],"October") then "10" else if
+Text.Contains([Date],"November") then "11" else if
+Text.Contains([Date],"December") then "12" else "0"),
+    #"Reordered Columns" = Table.ReorderColumns(#"Find Month",{"Unit / Serial", "Date", "Content", "Photo", "Seat", "Based", "Crew", "Crashed", "Month"}),
+    #"Duplicated Column" = Table.DuplicateColumn(#"Reordered Columns", "Date", "Date - Copy"),
+    #"Split Column by Delimiter" = Table.SplitColumn(#"Duplicated Column","Date - Copy",Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv),{"Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4", "Date - Copy.5", "Date - Copy.6", "Date - Copy.7", "Date - Copy.8", "Date - Copy.9"}),
+    #"Replaced Value1" = Table.ReplaceValue(#"Split Column by Delimiter","th","",Replacer.ReplaceText,{"Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4", "Date - Copy.5", "Date - Copy.6", "Date - Copy.7", "Date - Copy.8", "Date - Copy.9"}),
+    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","nd","",Replacer.ReplaceText,{"Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4", "Date - Copy.5", "Date - Copy.6", "Date - Copy.7", "Date - Copy.8", "Date - Copy.9"}),
+    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value2","st","",Replacer.ReplaceText,{"Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4", "Date - Copy.5", "Date - Copy.6", "Date - Copy.7", "Date - Copy.8", "Date - Copy.9"}),
+    #"Replaced Value" = Table.ReplaceValue(#"Replaced Value5","th","",Replacer.ReplaceText,{"Month", "Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4"}),
+    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value","rd","",Replacer.ReplaceText,{"Month", "Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4"}),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value3",{{"Date - Copy.1", Int64.Type}, {"Date - Copy.2", Int64.Type}, {"Date - Copy.3", Int64.Type}, {"Date - Copy.4", Int64.Type}, {"Date - Copy.5", Int64.Type}, {"Date - Copy.6", Int64.Type}, {"Date - Copy.7", Int64.Type}, {"Date - Copy.8", Int64.Type}, {"Date - Copy.9", Int64.Type}}),
+    #"Remove Nulls1" = Table.ReplaceValue(#"Changed Type1",null,0,Replacer.ReplaceValue,{"Date - Copy.4"}),
+    #"Remove Nulls2" = Table.ReplaceValue(#"Remove Nulls1",null,0,Replacer.ReplaceValue,{"Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4", "Date - Copy.5", "Date - Copy.6", "Date - Copy.7", "Date - Copy.8", "Date - Copy.9"}),
+    #"Filtered Rows1" = Table.SelectRows(#"Remove Nulls2", each ([Date] <> "0")),
+    #"Find Year" = Table.AddColumn(#"Filtered Rows1", "Year", each if (try Number.From([#"Date - Copy.1"]) otherwise 0)>1000 then [#"Date - Copy.1"]
+else if (try Number.From([#"Date - Copy.2"]) otherwise 0)>1000 then [#"Date - Copy.2"]
+else if (try Number.From([#"Date - Copy.3"]) otherwise 0)>1000 then [#"Date - Copy.3"]
+else if (try Number.From([#"Date - Copy.4"]) otherwise 0)>1000 then [#"Date - Copy.4"]
+else if (try Number.From([#"Date - Copy.5"]) otherwise 0)>1000 then [#"Date - Copy.5"]
+else if (try Number.From([#"Date - Copy.6"]) otherwise 0)>1000 then [#"Date - Copy.6"]
+else if (try Number.From([#"Date - Copy.7"]) otherwise 0)>1000 then [#"Date - Copy.7"]
+else if (try Number.From([#"Date - Copy.8"]) otherwise 0)>1000 then [#"Date - Copy.8"]
+else if (try Number.From([#"Date - Copy.9"]) otherwise 0)>1000 then [#"Date - Copy.9"]
+else "0"),
+    #"Find Day" = Table.AddColumn(#"Find Year", "Day", each if (try Number.From([#"Date - Copy.1"]) otherwise 10000)<1000 then [#"Date - Copy.1"]
+else if (try Number.From([#"Date - Copy.2"]) otherwise 10000)<1000 then [#"Date - Copy.2"]
+else if (try Number.From([#"Date - Copy.3"]) otherwise 10000)<1000 then [#"Date - Copy.3"]
+else if (try Number.From([#"Date - Copy.4"]) otherwise 10000)<1000 then [#"Date - Copy.4"]
+else if (try Number.From([#"Date - Copy.5"]) otherwise 10000)<1000 then [#"Date - Copy.5"]
+else if (try Number.From([#"Date - Copy.6"]) otherwise 10000)<1000 then [#"Date - Copy.6"]
+else if (try Number.From([#"Date - Copy.7"]) otherwise 10000)<1000 then [#"Date - Copy.7"]
+else if (try Number.From([#"Date - Copy.8"]) otherwise 10000)<1000 then [#"Date - Copy.8"]
+else if (try Number.From([#"Date - Copy.9"]) otherwise 10000)<1000 then [#"Date - Copy.9"]
+else "0"),
+    #"Renamed Columns" = Table.RenameColumns(#"Find Day",{{"Date", "Date (Raw)"}}),
+    #"Combine Separate Date Fields" = Table.AddColumn(#"Renamed Columns", "Date", each Text.From([Month]) &"/"& Text.From([Day]) &"/"& Text.From([Year])),
+    #"Changed Type2" = Table.TransformColumnTypes(#"Combine Separate Date Fields",{{"Date", type date}}),
+    #"Replaced Value6" = Table.ReplaceValue(#"Changed Type2","?","Unknown",Replacer.ReplaceValue,{"Unit / Serial"}),
+    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","??","Unknown",Replacer.ReplaceValue,{"Unit / Serial"}),
+    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","???","Unknown",Replacer.ReplaceText,{"Unit / Serial"}),
+    #"Filtered Rows" = Table.SelectRows(#"Replaced Value8", each true),
+    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"Month", "Date - Copy.1", "Date - Copy.2", "Date - Copy.3", "Date - Copy.4", "Date - Copy.5", "Date - Copy.6", "Date - Copy.7", "Date - Copy.8", "Date - Copy.9", "Year", "Day"}),
+    #"Added Index" = Table.AddIndexColumn(#"Removed Columns", "Index", 1, 1),
+    #"Reordered Columns1" = Table.ReorderColumns(#"Added Index",{"Index", "Unit / Serial", "Date (Raw)", "Content", "Photo", "Seat", "Based", "Crew", "Crashed", "Date"}),
+    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns1",{"Photo", "Seat"}),
+    #"Reordered Columns2" = Table.ReorderColumns(#"Removed Columns1",{"Index", "Date", "Date (Raw)", "Unit / Serial", "Based", "Content", "Crew", "Crashed"}),
+    #"Added Custom" = Table.AddColumn(#"Reordered Columns2", "Aircraft", each if [Index]>0 then "T-38" else 0),
+    #"Reordered Columns3" = Table.ReorderColumns(#"Added Custom",{"Index", "Aircraft", "Date", "Date (Raw)", "Unit / Serial", "Based", "Content", "Crew", "Crashed"}),
+    #"Added Custom1" = Table.AddColumn(#"Reordered Columns3", "Primary Key", each Text.From([Index])&"-"&[Aircraft]),
+    #"Reordered Columns4" = Table.ReorderColumns(#"Added Custom1",{"Index", "Primary Key", "Aircraft", "Date", "Date (Raw)", "Unit / Serial", "Based", "Content", "Crew", "Crashed"}),
+    #"Filtered Feedback rows" = Table.SelectRows(#"Reordered Columns4", each ([#"Date (Raw)"] <> "FEEDBACK")),
+    #"Removed Columns2" = Table.RemoveColumns(#"Filtered Feedback rows",{"Index"}),
+    #"Added Custom2" = Table.AddColumn(#"Removed Columns2", "Base", each if Text.Contains([Based],"It has been 27 years since I sat on an ejection seat") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"121 Sq") then "Izmir Air Station" else if
+Text.Contains([Based],"121 Sq") then "Izmir Air Station" else if
+Text.Contains([Based],"121 Sq") then "Izmir Air Station" else if
+Text.Contains([Based],"12nd FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"12th FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"12th FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"12th FTW") then "Randolph Air Force Base" else if
+Text.Contains([Based],"14 FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"14th FTW") then "Columbus Air Force Base" else if
+Text.Contains([Based],"26 TFTS") then "Clark Air Base" else if
+Text.Contains([Based],"34th ARS") then "Seymour Johnson Air Force Base" else if
+Text.Contains([Based],"3560th ") then "Webb Air Force Base " else if
+Text.Contains([Based],"38th FTW") then "Williams Air Force Base" else if
+Text.Contains([Based],"412th TW") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"434th TFTS") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"435th FTS") then "Randolph Air Force Base" else if
+Text.Contains([Based],"436th TFTS") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Langley") then "Langley Air Force Base" else if
+Text.Contains([Based],"6512th TS") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Richards-Gebaur") then "Richards-Gebaur Air Reserve Station" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"87th FTS") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Edwards") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"lackland") then "Lackland Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Unknown") then "Unknown" else if
+Text.Contains([Based],"Bergstrom") then "Bergstrom Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Craig") then "Craig Air Force Base" else if
+Text.Contains([Based],"Craig") then "Craig Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"ROCAF 14th") then "Taoyuan Air Base Command" else if
+Text.Contains([Based],"El Paso Tex") then "Bergstrom Air Force Base" else if
+Text.Contains([Based],"Ellington") then "Ellington Field Joint Reserve Base" else if
+Text.Contains([Based],"Ellington") then "Ellington Field Joint Reserve Base" else if
+Text.Contains([Based],"Following crews killed") then "Unknown" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Turkish") then "Unknown" else if
+Text.Contains([Based],"Holloman") then "Holloman Air Force Base" else if
+Text.Contains([Based],"Houston Space Center") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Columbus") then "Columbus Air Force Base" else if
+Text.Contains([Based],"Sheppard") then "Sheppard Air Force Base" else if
+Text.Contains([Based],"Tinker") then "Tinker Air Force Base" else if
+Text.Contains([Based],"Data Base") then "Unknown" else if
+Text.Contains([Based],"Laredo") then "Laredo Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Laughlin") then "Laughlin Air Force Base" else if
+Text.Contains([Based],"Lunar Lander") then "Unknown" else if
+Text.Contains([Based],"Moody") then "Moody Air Force Base" else if
+Text.Contains([Based],"NASA") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"NASA") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"NASA") then "Lyndon B. Johnson Space Center" else if
+Text.Contains([Based],"Lambert") then "Lambert–St. Louis International Airport" else if
+Text.Contains([Based],"Navy Test") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"NTPS") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"Naval Air Station") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Randolph") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Reese") then "Reese Air Force Base" else if
+Text.Contains([Based],"Source") then "Unknown" else if
+Text.Contains([Based],"Source") then "Unknown" else if
+Text.Contains([Based],"Taiwan") then "Taoyuan Air Base Command" else if
+Text.Contains([Based],"Edwards") then "Edwards Air Force Base" else if
+Text.Contains([Based],"Burk Lakefront") then "Cleveland Burke Lakefront Airport" else if
+Text.Contains([Based],"Thunderbirds") then "Hill Air Force Base" else if
+Text.Contains([Based],"Thunderbirds #9") then "Nellis Air Force Base" else if
+Text.Contains([Based],"Two pilots were killed in a T-38") then "Randolph Air Force Base" else if
+Text.Contains([Based],"Tyndall") then "Tyndall Air Force Base" else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"NTPS") then "United States Naval Test Pilot School" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Vance") then "Vance Air Force Base" else if
+Text.Contains([Based],"Webb") then "Webb Air Force Base " else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"Williams AFB") then "Williams Air Force Base" else if
+Text.Contains([Based],"Williams Air Force") then "Williams Air Force Base" else "CHECK"),
+    #"Filtered Source rows" = Table.SelectRows(#"Added Custom2", each ([Based] <> "Source:" and [Based] <> "Sources: US Media"))
+in
+    #"Filtered Source rows"
+
+
+    //AIB Reports
+
+    let
+    Source = Csv.Document(File.Contents("C:\Users\anthony.gould\Documents\Slalom\My Stuff\T-38 Project\AIB Reports\2000.csv"),[Delimiter=",",Encoding=65001]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"msonormal_value_1", type date}, {"msonormal_value_1_numbers", type text}, {"msonormal_value_2", type text}, {"msonormal_value_2_numbers", type text}, {"spelle_value", type text}, {"msonormal_value_3", type text}, {"clickhere_link", type text}, {"clickhere_link/_text", type text}, {"clickhere_link/_title", type text}}),
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"msonormal_value_1_numbers"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"msonormal_value_1", "Date"}, {"msonormal_value_2", "Aircraft"}}),
+    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns",{"msonormal_value_2_numbers"}),
+    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"spelle_value", "Base"}, {"msonormal_value_3", "Crashed"}, {"clickhere_link", "Web Link"}}),
+    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns1",{"clickhere_link/_text", "clickhere_link/_title"}),
+    #"Added Index" = Table.AddIndexColumn(#"Removed Columns2", "Index", 1, 1),
+    #"Reordered Columns1" = Table.ReorderColumns(#"Added Index",{"Index", "Aircraft", "Date", "Base", "Crashed", "Web Link"})
+in
+    #"Reordered Columns1"
+
+    let
+    Source = Csv.Document(File.Contents("C:\Users\anthony.gould\Documents\Slalom\My Stuff\T-38 Project\AIB Reports\2001.csv"),[Delimiter=",",Encoding=65001]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"msonormal_value_1", type date}, {"msonormal_value_1_numbers", type text}, {"msonormal_value_2", type text}, {"spelle_value", type text}, {"msonormal_value_3", type text}, {"clickhere_link", type text}, {"clickhere_link/_text", type text}, {"clickhere_link/_title", type text}}),
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"msonormal_value_1_numbers", "clickhere_link/_text", "clickhere_link/_title"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"msonormal_value_2", "Aircraft"}, {"spelle_value", "Base"}, {"msonormal_value_3", "Crashed"}, {"clickhere_link", "Web Link"}}),
+    #"Added Index" = Table.AddIndexColumn(#"Renamed Columns", "Index", 1, 1),
+    #"Reordered Columns" = Table.ReorderColumns(#"Added Index",{"Index", "msonormal_value_1", "Aircraft", "Base", "Crashed", "Web Link"}),
+    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns",{{"msonormal_value_1", "Date"}}),
+    #"Reordered Columns1" = Table.ReorderColumns(#"Renamed Columns1",{"Index", "Aircraft", "Date", "Base", "Crashed", "Web Link"})
+in
+    #"Reordered Columns1"
+
+    let
+    Source = Csv.Document(File.Contents("C:\Users\anthony.gould\Documents\Slalom\My Stuff\T-38 Project\AIB Reports\2008.csv"),[Delimiter=",",Encoding=65001]),
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}}),
+    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type"),
+    #"Added Index" = Table.AddIndexColumn(#"Promoted Headers", "Index", 1, 1),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Added Index",{{"msonormal_values", type date}}),
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"msonormal_values_numbers", "clickhere_link/_text", "clickhere_link/_title"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"msonormal_values", "Date"}, {"msonormalbold_value", "Aircraft"}, {"spelle_value", "Base"}, {"msonormalblock_value", "Crashed"}, {"clickhere_link", "Web Link"}}),
+    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns",{"Index", "Aircraft", "Date", "Base", "Crashed", "Web Link"})
+in
+    #"Reordered Columns"
